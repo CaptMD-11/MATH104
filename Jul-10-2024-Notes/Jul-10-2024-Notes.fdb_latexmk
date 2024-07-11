@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1720657934 "/Users/nydhruva/git/LaTeX/MATH104/Jul-10-2024-Notes/Jul-10-2024-Notes.tex" "Jul-10-2024-Notes.pdf" "Jul-10-2024-Notes" 1720657936 0
-  "/Users/nydhruva/git/LaTeX/MATH104/Jul-10-2024-Notes/Jul-10-2024-Notes.tex" 1720657934 5096 1034c68bc842926f4fc3619211af7670 ""
+["pdflatex"] 1720669238 "/Users/nydhruva/git/LaTeX/MATH104/Jul-10-2024-Notes/Jul-10-2024-Notes.tex" "Jul-10-2024-Notes.pdf" "Jul-10-2024-Notes" 1720669240 0
+  "/Users/nydhruva/git/LaTeX/MATH104/Jul-10-2024-Notes/Jul-10-2024-Notes.tex" 1720669238 5116 d7cb5dacf9ff575f7e2310b321bf5286 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -263,9 +263,9 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1693530960 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1693530901 7883453 e715a5447c98d5844e9e25d55e00422f ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "Jul-10-2024-Notes.aux" 1720657936 554 04ae3964aa57b78538b565d0454a3de2 "pdflatex"
-  "Jul-10-2024-Notes.out" 1720657935 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "Jul-10-2024-Notes.tex" 1720657934 5096 1034c68bc842926f4fc3619211af7670 ""
+  "Jul-10-2024-Notes.aux" 1720669239 554 04ae3964aa57b78538b565d0454a3de2 "pdflatex"
+  "Jul-10-2024-Notes.out" 1720669239 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "Jul-10-2024-Notes.tex" 1720669238 5116 d7cb5dacf9ff575f7e2310b321bf5286 ""
   (generated)
   "Jul-10-2024-Notes.aux"
   "Jul-10-2024-Notes.log"

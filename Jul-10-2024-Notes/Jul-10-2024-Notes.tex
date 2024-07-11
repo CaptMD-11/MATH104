@@ -59,11 +59,11 @@ If we take the inequality $0 < d_x(x,p) < \delta$, we don't look at what $f$ doe
 
 
 \begin{theorem}[\textbf{Theorem 4.2}]
-    Let $X, Y, E, f, p$ be as from Definition 4.1. $\lim_{x \to p} f(x)$ if and only if for every sequence $\{p_n\}$ in $E$ such that $p_n \neq p$ and $\lim_{n \to \infty} p_n = p$, we have that $\lim_{n \to \infty} f(p_n) = q$. 
+    Let $X, Y, E, f, p$ be as from Definition 4.1. $\lim_{x \to p} f(x) = q$ if and only if for every sequence $\{p_n\}$ in $E$ such that $p_n \neq p$ and $\lim_{n \to \infty} p_n = p$, we have that $\lim_{n \to \infty} f(p_n) = q$. 
 \end{theorem}
 \begin{proof}
     $(\rightarrow)$: Suppose $\lim_{x \to p} f(x) = q$. Let $\{p_n\}$ in $E$ satisfy $p_n \neq p$ and $p_n \to p$. Let $\epsilon > 0$ be given. We know there exists a $\delta > 0$ such that if $x \in E$ and $0 < d_x(x,p) < \delta$, then $d_y(f(x),q) < \epsilon$. Since $p_n \to p$, we know there exists an $N \in \mathbb{N}$ such that if $n \geq N$, then $d(p_n, p) < \delta$. So for this $N$, if $n \geq N$, then $d(f(p_n), q) < \epsilon$. \\
-    $(\leftarrow)$: Consider the contrapositive of $(\rightarrow)$. Suppose $\lim_{x \to p} f(x) \neq q$, then there exists an $\epsilon > 0$ such that for all $\delta > 0$, there exists an $x \in E$ for which $d_y(f(x), q) \geq \epsilon$ but $0 < d_x(x,p) < \delta$. Let $\delta_n = \frac{1}{n} \hspace{0.25cm} (n=1,2,3, \dots)$ and choose $p_n$ such that $0 < d(p_n, p) < \frac{1}{n} = \delta_n$. However, $d(f(p_n), p) \geq \epsilon$. Then, $p_n \to p$ but $f(p_n) \nrightarrow q$, since all images of $p_n$ are at least $\epsilon$ away from $q$. 
+    $(\leftarrow)$: Consider the contrapositive of the converse of $(\rightarrow)$. Suppose $\lim_{x \to p} f(x) \neq q$, then there exists an $\epsilon > 0$ such that for all $\delta > 0$, there exists an $x \in E$ for which $d_y(f(x), q) \geq \epsilon$ but $0 < d_x(x,p) < \delta$. Let $\delta_n = \frac{1}{n} \hspace{0.25cm} (n=1,2,3, \dots)$ and choose $p_n$ such that $0 < d(p_n, p) < \frac{1}{n} = \delta_n$. However, $d(f(p_n), q) \geq \epsilon$. Then, $p_n \to p$ but $f(p_n) \nrightarrow q$, since all images of $p_n$ are at least $\epsilon$ away from $q$. 
 \end{proof}
 
 Corollary: if $f$ has a limit at $p$, then the limit is unique. 

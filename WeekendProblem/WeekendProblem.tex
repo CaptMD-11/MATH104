@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{authblk}
+\usepackage{tkz-euclide}
+\usepackage{tikz}
+\usepackage{changepage}
+\usepackage{lipsum}
+\usepackage{tree-dvips}
+\usepackage{qtree}
+\usepackage[linguistics]{forest}
+\usepackage[hidelinks]{hyperref}
+\usepackage{mathtools}
+\usepackage{blindtext}
+\usepackage[cal=esstix,frak=euler,scr=boondox,bb= pazo]{mathalfa}
+\usepackage{graphicx}
+\usepackage[shortlabels]{enumitem}
+\graphicspath{{./images/}}
+\allowdisplaybreaks
+\allowbreak
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheoremstyle{named}{}{}{\itshape}{}{\bfseries}{.}{.5em}{\thmnote{#3's }#1}
+\theoremstyle{named}
+\newtheorem*{namedconjecture}{Distinct Factorizations Conjecture}
+\newtheorem{conjecture}{Conjecture}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\arcsec}{arcsec}
+\newcounter{customDef}
+\renewcommand{\thecustomDef}{\arabic{customDef}}
+\begin{document}
+\title{Weekend Problem}
+\author{}
+\date{}
+\maketitle
+\date
+
+    Define the floor function, $f: \mathbb{R} \to \mathbb{R}$ where $f(x) = \lfloor x \rfloor$. 
+    \begin{enumerate}[(a)]
+        \item Let $a \notin \mathbb{Z}$. Use the $\delta - \epsilon$ definition to show that $f$ is continuous at $a$. 
+        \\
+        \textit{Proof:} Let $\epsilon > 0$ be given. Then, we have the $\epsilon$-ball $N_\epsilon(f(a)) \subset \mathbb{R}$. Since $a \notin \mathbb{Z}$, $a \in \mathbb{R} \setminus \mathbb{Z}$. Let $g = a - \lfloor a \rfloor$ represent the non-integer component of $a$; innately, $0 < g < 1$ as $a \notin \mathbb{Z}$. If $g < \frac{1}{2}$, then choose $\delta = \frac{g}{2}$ and so $f\left(N_\delta(a)\right) \subset N_\epsilon(f(a))$, which is obvious since every $x \in \left(N_\delta(a)\right)$ has the function value $f(a)$. If $g = \frac{1}{2}$, then choose $\delta = \frac{1}{4}$, and so every $x \in \left(a - \frac{1}{4}, a + \frac{1}{4}\right)$ has a function value $f(a) \in \left(f(a) - \epsilon, f(a) + \epsilon\right)$. If $g > \frac{1}{2}$, choose $\delta = \frac{1-g}{2}$ and so every $x \in (a - \delta, a + \delta)$ has a function value $f(a) \in \left(f(a) - \epsilon, f(a) + \epsilon\right)$. We have shown, for each case of $g$, a $\delta > 0$ exists, so thus, $f$ is continuous at all $a \notin \mathbb{Z}$. $\qed$
+        \item Let $a \in \mathbb{Z}$. Use the $\delta - \epsilon$ definition to show that $f$ is not continuous at $a$. 
+        \\
+        \textit{Proof:} Suppose for contradiction that $f$ is continuous for an integer $a$. Then, by definition, for every $\epsilon > 0$, there exists a $\delta > 0$ such that for all $x \in E$ (where $E \subset \mathbb{R}$) if $d_x(x,a) < \delta$, then $d_y(f(x), f(a)) < \epsilon$. Let an $\epsilon > 0$ that is sufficiently small be given. Then, we must show that there is a $\delta > 0$ such that for all $x \in E = N_\epsilon(a)$, $f(E) \subset N_\epsilon(f(a))$. By definition, $N_\delta(a) = (a - \delta, a + \delta)$ and $N_\epsilon(f(a)) = (a - \epsilon, a + \epsilon)$; the latter is due to definition that $a = f(a)$ for integers $a$. So, all $x \in (a - \delta, a + \delta)$ have their function values in $(a - \delta, a + \delta)$. Since $f$ returns exclusively integers, any element $x \in (a - \delta, a + \delta)$ has a function value of $a$, since we choose $\epsilon$ to be sufficiently small. Let $x_0 = \frac{(a - \delta) + a}{2} \in (a - \delta, a + \delta)$. Since $x_0 < a$, thus by definition of $f$, $f\left(x_0\right) \leq a-1$ as any $x \geq a$ has a function value at least $a$. Therefore, we have the contradiction that $f\left(x_0\right) = a$ while also $f\left(x_0\right) < a$, so $f$ is not continuous at any integer $a$. $\qed$
+    \end{enumerate}
+
+\end{document}

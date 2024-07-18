@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1721283254 "/Users/nydhruva/git/LaTeX/MATH104/Midterm2Defs1/Midterm2Defs1.tex" "Midterm2Defs1.pdf" "Midterm2Defs1" 1721283255 0
-  "/Users/nydhruva/git/LaTeX/MATH104/Midterm2Defs1/Midterm2Defs1.tex" 1721283253 6090 21e1685d2d558c726e9e717584bf6b6d ""
+["pdflatex"] 1721336457 "/Users/nydhruva/git/LaTeX/MATH104/Midterm2Defs/Midterm2Defs.tex" "Midterm2Defs.pdf" "Midterm2Defs" 1721336458 0
+  "/Users/nydhruva/git/LaTeX/MATH104/Midterm2Defs/Midterm2Defs.tex" 1721336457 5706 3c8435880696713c4d02898d63d34388 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -260,12 +260,12 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1693530960 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1693530901 7883453 e715a5447c98d5844e9e25d55e00422f ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "Midterm2Defs1.aux" 1721283255 554 dd2b48f1aba1e3b725040b4d3abf7fbe "pdflatex"
-  "Midterm2Defs1.out" 1721283254 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "Midterm2Defs1.tex" 1721283253 6090 21e1685d2d558c726e9e717584bf6b6d ""
+  "Midterm2Defs.aux" 1721336458 554 04ae3964aa57b78538b565d0454a3de2 "pdflatex"
+  "Midterm2Defs.out" 1721336458 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "Midterm2Defs.tex" 1721336457 5706 3c8435880696713c4d02898d63d34388 ""
   (generated)
-  "Midterm2Defs1.aux"
-  "Midterm2Defs1.log"
-  "Midterm2Defs1.out"
-  "Midterm2Defs1.pdf"
+  "Midterm2Defs.aux"
+  "Midterm2Defs.log"
+  "Midterm2Defs.out"
+  "Midterm2Defs.pdf"
   (rewritten before read)

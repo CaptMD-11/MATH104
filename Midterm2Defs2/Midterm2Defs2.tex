@@ -1,0 +1,123 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{authblk}
+\usepackage{tkz-euclide}
+\usepackage{tikz}
+\usepackage{changepage}
+\usepackage{lipsum}
+\usepackage{tree-dvips}
+\usepackage{qtree}
+\usepackage[linguistics]{forest}
+\usepackage[hidelinks]{hyperref}
+\usepackage{mathtools}
+\usepackage{blindtext}
+\usepackage[cal=esstix,frak=euler,scr=boondox,bb= pazo]{mathalfa}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+\allowdisplaybreaks
+\allowbreak
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheoremstyle{named}{}{}{\itshape}{}{\bfseries}{.}{.5em}{\thmnote{#3's }#1}
+\theoremstyle{named}
+\newtheorem*{namedconjecture}{Distinct Factorizations Conjecture}
+\newtheorem{conjecture}{Conjecture}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\arcsec}{arcsec}
+\newcounter{customDef}
+\renewcommand{\thecustomDef}{\arabic{customDef}}
+\begin{document}
+\title{Math 104 - Midterm 2 Definitions (Attempt 2)}
+\author{}
+\date{}
+\maketitle
+\date
+
+\renewcommand{\thedefinition}{3.1}
+\begin{definition}
+    A sequence $\{p_n\}$ in a metric space $(X,d)$ is said to converge if there exists a point $p \in X$ with the following property: for every $\epsilon > 0$ there exists an $N \in \mathbb{N}$ such that if $n \geq N$, then $d(p_n, p) < \epsilon$. We denote the convergence of $\{p_n\}$ to $p$ in the following three ways: 
+    \begin{enumerate}
+        \item $\{p_n\}$ converges to $p$. 
+        \item $p_n \to p$. 
+        \item $\lim_{n \to \infty} p_n = p$. 
+    \end{enumerate}
+    We say that if $\{p_n\}$ does not converge, it diverges. 
+\end{definition}
+
+\renewcommand{\thedefinition}{3.5}
+\begin{definition}
+    Let $\{p_n\}$ be a sequence in a metric space $(X,d)$. Let $\{n_i\}$ be a sequence of natural numbers with $n_1 < n_2 < n_3 < \dots$. We denote $\{p_{n_i}\}$ to be a sequence of $\{p_n\}$. If $\{p_{n_i}\}$ converges to some $p \in X$, we say that $p$ is a subsequential limit of $\{p_n\}$. 
+\end{definition}
+
+\renewcommand{\thedefinition}{3.8}
+\begin{definition}
+    A sequence $\{p_n\}$ in a metric space $(X,d)$ is said to be a Cauchy sequence if for every $\epsilon > 0$ there exists an $N \in \mathbb{R}$ such that if $n, m \geq N$, then $d\left(p_n, p_m\right) < \epsilon$. 
+\end{definition}
+
+\renewcommand{\thedefinition}{3.12}
+\begin{definition}
+    A metric space in which every Cauchy sequence converges is said to be complete. 
+\end{definition}
+
+\renewcommand{\thedefinition}{3.13}
+\begin{definition}
+    Let $\{s_n\}$ be a sequence of real numbers. We define the following: 
+    \begin{enumerate}
+        \item if $s_n \leq s_{n+1} (n=1,2,3,\dots)$, we say that $\{s_n\}$ is monotonically increasing. 
+        \item if $s_n \geq s_{n+1} (n=1,2,3,\dots)$, we say that $\{s_n\}$ is monotonically decreasing. 
+    \end{enumerate}
+\end{definition}
+
+\renewcommand{\thedefinition}{3.16}
+\begin{definition}
+    Let $\{s_n\}$ be a sequence of real numbers. Let $E$ be the set of subsequential limits of $\{s_n\}$. Denote $s^\star = \sup E$ and $s_\star = \inf E$. Then, $s^\star$ is the upper limit of $\{s_n\}$ and $s_\star$ is the lower limit of $\{s_n\}$. We say that $\lim_{n \to \infty} \sup s_n = s^\star$ and $\lim_{n \to \infty} \inf s_n = s_\star$. 
+\end{definition}
+
+\renewcommand{\thedefinition}{3.21}
+\begin{definition}
+    Given $\{a_i\} \biggr\rvert_{i=1}^{\infty}$, let $\sum_{i=k}^{q} a_i = a_k + a_{k+1} + \dots + a_q$. We denote $s_n = \sum_{k=1}^{n} a_k$ to be the $n^{th}$ partial sum. 
+\end{definition}
+
+\renewcommand{\thedefinition}{4.1}
+\begin{definition}
+    Let $(X,d_x)$ and $(Y,d_y)$ be metric spaces. Let $E \subset X$, $f: E \to Y$, and $p$ is a limit point of $E$. We say that $\lim_{x \to p} f(x) = q$ if there is a a point $q \in Y$ such that for every $\epsilon > 0$ there exists a $\delta > 0$ such that for all $x \in E$, if $0 < d_x(x,p) < \delta$, then $d_y(f(x), q) < \epsilon$. 
+\end{definition}
+
+\renewcommand{\thedefinition}{4.5}
+\begin{definition}
+    Let $(X, d_x)$ and $(Y, d_y)$ be metric spaces. Let $E \subset X$, $f: E \to Y$, and $p \in E$. We say that $f$ is continuous at $p$, if for every $\epsilon > 0$ there exists a $\delta > 0$ such that for all $x \in E$ if $d_x(x,p) < \delta$, then $d_y(f(x), f(p)) < \epsilon$. 
+\end{definition}
+
+\renewcommand{\thedefinition}{4.13}
+\begin{definition}
+    A mapping $f: E \to \mathbb{R}^k$ is bounded if there exists a real number $M$ such that $\left|f(x)\right| \leq M$ for all $x \in E$. 
+\end{definition}
+
+\renewcommand{\thedefinition}{4.18}
+\begin{definition}
+    Let $f: X \to Y$, where $X$ and $Y$ are metric spaces. We say that $f$ is uniformly continuous on $X$ if for every $\epsilon > 0$ there exists a $\delta > 0$ such that for all $p,q \in X$, if $d_x(p,q) < \delta$, then $d_y(f(p), f(q)) < \epsilon$. 
+\end{definition}
+
+\renewcommand{\thedefinition}{5.1}
+\begin{definition}
+    A function $f: [a,b] \to \mathbb{R}$ is differentiable if the following limit exists: 
+    $$
+    \lim_{t \to x} \frac{f(t) - f(x)}{t-x} = f'(x)
+    $$
+    where $f'$ is the first derivative of $f$. Note that $t \in [a,b]$ and $t \neq x$. 
+\end{definition}
+
+\renewcommand{\thedefinition}{of Sequentially Compact}
+\begin{definition}
+    Let $S$ be a set. We say that $S$ is sequentially compact if every sequence in $S$ has a subsequence whose limit is in $S$. 
+\end{definition}
+
+\renewcommand{\thedefinition}{5.7}
+\begin{definition}
+    Let $f: X \to \mathbb{R}$. $f$ has a local minimum at a point $p \in X$ if there exists an $\epsilon > 0$ such that $f(q) \geq f(p)$ for every $q \in X$ such that $q$ is in the $\epsilon-$ ball of $p$. $f$ has a local maximum at a point $p \in X$ if there exists an $\epsilon > 0$ such that $f(q) \leq f(p)$ for every $q \in X$ such that $q$ is in the $\epsilon-$ ball of $p$. 
+\end{definition}
+
+\end{document}

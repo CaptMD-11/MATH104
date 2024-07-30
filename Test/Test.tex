@@ -38,58 +38,39 @@
 
 \renewcommand{\thedefinition}{6.1}
 \begin{definition}
-    Let $[a,b]$ be a given interval. A partition $P$ is a set of points $x_0, \dots, x_n$ with $a = x_0 \leq x_1 \leq \dots \leq x_n = b$. Let $\Delta x_i = x_i - x_{i-1}$ and $f$ be a bounded function on $[a,b]$. Then, we define $M_i = \sup f(x) (x_{i-1} \leq x \leq x_i)$ and $m_i = \inf f(x) (x_{i-1} \leq x \leq x_i)$. Then, define $U(P,f) = \sum_{i=1}^{n} M_i \cdot \Delta x_i$ and $L(P,f) = \sum_{i=1}^{n} m_i \cdot \Delta x_i$. Then, define $\int_{a}^{\overline{b}} f dx = \inf U(P,f)$ to be the upper Riemann integral and $\int_{\underline{a}}^{b} f dx = \sup L(P,f)$ to be the lower Riemann integral. The $\inf$ and $\sup$ are taken over all partitions of $[a,b]$. If $\int_{\underline{a}}^{a} f dx = \int_{a}^{\overline{b}} f dx$, then, $f$ is Riemann integrable and we write $f \in \mathscr{R}$ and denote the common value of the lower/upper Riemann integrals as $\int_{a}^{b} f dx$ (term: Riemann integral). 
-\end{definition}
-
-\renewcommand{\thedefinition}{6.1}
-\begin{definition}
-    Let $[a,b]$ be the given interval. A partition $P$ is a set of points $x_0, \dots, x_n$ with $a=x_0 \leq \dots \leq x_n = b$. Let $\Delta x_i = x_i - x_{i-1}$ and $f$ be a bounded function on $[a,b]$. We define $M_i = \sup f(x) (x_{i-1} \leq x \leq x_i)$ and $m_i = \inf f(x) (x_{i-1} \leq x \leq x_i)$. Then, define $U(P,f) = \sum_{i=1}^{n} M_i \cdot \Delta x_i$ and $L(P,f) = \sum_{i=1}^{n} m_i \cdot \Delta x_i$. Then, define $\int_{\underline{a}}^{b} f dx = \sup L(P,f)$ as the lower Riemann integral and $\int_{a}^{\overline{b}} f dx = \inf U(P,f)$ as the upper Riemann integral. The $\inf$ and $\sup$ are taken over all partitions of $[a,b]$. If $\int_{\underline{a}}^{b} f dx = \int_{a}^{\overline{b}} f dx$, then $f$ is Riemann integrable and we write $f\in\mathscr{R}$ and we denote the common value to be $\int_{a}^{b} f dx$ to be the Riemann integral. 
+    Let $[a,b]$ be the given interval. A partition $P$ on $[a,b]$ is a set of points $x_0, \dots, x_n$ with $a=x_0 \leq x_1 \leq \dots \leq x_n = b$. Let $\Delta x_i = x_i - x_{i-1}$ and $f$ be a bounded function on $[a,b]$. Then, let $M_i = \sup f(x)$ on $[x_{i-1}, x_i]$ and $m_i = \inf f(x)$ on $[x_{i-1}, x_i]$. Denote $U(P,f) = \sum_{i=1}^{n} M_i \cdot \Delta x_i$ and $L(P,f) = \sum_{i=1}^{n} m_i \cdot \Delta x_i$. Then, write $\int_{\underline{a}}^{b} f dx = \sup L(P,f)$ (which is the lower Riemann integral) and $\int_{a}^{\overline{b}} f dx = \inf U(P,f)$ (which is the upper Riemann integral). Note that the inf and sup are taken over all possible partitions of $[a,b]$. Then, if $\int_{\underline{a}}^{b} f dx = \int_{a}^{\overline{b}} f dx$, then, we say that $f$ is Riemann integrable on $[a,b]$ and write $f\in\mathscr{R}$. Denote the common value as $\int_{a}^{b} f dx$ (which is the Riemann integral). 
 \end{definition}
 
 \renewcommand{\thedefinition}{6.2}
 \begin{definition}
-    Let $\alpha$ be a monotonically increasing function on $[a,b]$. For each partition, write $\Delta \alpha_i = \alpha(x_i) - \alpha(x_{i-1})$. $\Delta \alpha_i \geq 0$, since $\alpha$ is monotonically increasing. Then, denote $U(P,f,\alpha) = \sum_{i=1}^{n} M_i \cdot \Delta \alpha_i$ and $L(P,f,\alpha) = \sum_{i=1}^{n} m_i \cdot \Delta \alpha_i$. Then, denote $\int_{\underline{a}}^{b} f d\alpha = \sup L(P,f,\alpha)$ and $\int_{a}^{\overline{b}} f d\alpha = \inf U(P,f,\alpha)$. Then, if $\int_{\underline{a}}^{b} f d\alpha = \int_{a}^{\overline{b}} f d\alpha$, then denote the common value as $\int_{a}^{b} f d\alpha$ (which is the Riemann Stieltjes Integral) of $f$ on $[a,b]$. 
+    Let $\alpha$ be a monotonically increasing function on an interval $[a,b]$. Write $\Delta \alpha_i = \alpha(x_i) - \alpha(x_{i-1})$. Note that $\Delta \alpha_i \geq 0$ since $\alpha$ is monotonically increasing. Let $f$ be a bounded real function on $[a,b]$. Then, denote $U(P,f,\alpha) = \sum_{i=1}^{n} M_i \Delta \alpha_i$ and $L(P,f,\alpha) = \sum_{i=1}^{n} m_i \Delta \alpha_i$. Then, write $\int_{\underline{a}}^{b} f d\alpha = \sup L(P,f,\alpha)$ and $\int_{a}^{\overline{b}} f d\alpha = \inf U(P,f,\alpha)$. If $\int_{\underline{a}}^{b} f d\alpha = \int_{a}^{\overline{b}} f d\alpha$, denote the common value as $\int_{a}^{b} f d\alpha$ (which is the Riemann-Stieltjes Integral of $f$ on $[a,b]$). 
 \end{definition}
 
 \renewcommand{\thedefinition}{6.3}
 \begin{definition}
-    The partition $P^\star$ is a refinement of $P$ if $P^\star \supset P$. $P^\star$ is the common refinement of $P_1$ and $P_2$ if $P^\star = P_1 \cup P_2$. 
+    $P^\star$ is a refinement of a partition $P$ if $P^\star \supset P$. $P$ is a common refinement of $P_1$ and $P_2$ if $P = P_1 \cup P_2$. 
 \end{definition}
 
 \renewcommand{\thedefinition}{7.1}
 \begin{definition}
-Suppose $\{f_n\} (n=1,2,3,\dots)$ is a sequence of functions defined on a set $E$, and suppose that the sequence of numbers $\{f_n(x)\}$ converges for every $x \in E$. Define a function $f$: 
-$$
-f(x) = \lim_{n \to \infty} f_n(x)  (x \in E)
-$$
-$\{f_n\}_{n=1}^{\infty}$ converges on $E$ and $f$ is the limit of $\{f_n\}$. $\{f_n\}_{n=1}^{\infty}$ converges pointwise to $f$ on $E$. If $\sum f_n(x)$ converges for every $x \in E$, and if we define $f(x) = \sum_{n=1}^{\infty} f_n(x) (x \in E)$, then $f$ is the sum of the series $\sum f_n$. 
-\end{definition}
-
-\renewcommand{\thedefinition}{7.1}
-\begin{definition}
-    Suppose $\{f_n\}$ is a sequence of functions on a set $E$ and $\{f_n(x)\}$ is a sequence of numbers that converges for every $x \in E$. Then, define the function $f$ as follows: 
+    Suppose $\{f_n\}$ is a series of functions defined on a set $E$. Then, also suppose that $\{f_n(x)\}$ is a sequence of numbers that converges for every $x \in E$. Then, we define a function $f$: 
     $$
     f(x) = \lim_{n \to \infty} f_n(x)
     $$
-    Then, $\{f_n\}_{n=1}^{\infty}$ converges on $E$ and $f$ is the limit of $\{f_n\}$. $\{f_n\}_{n=1}^{\infty}$ converges pointwise to $f$ on $E$. If $\sum f_n(x)$ converges for every $x \in E$, then we define $f(x) = \sum_{n=1}^{\infty} f_n(x)$ and $f$ is the sum of the series $\sum f_n$. 
+    $\{f_n\}$ converges on $E$ and $f$ is the limit of $\{f_n\}$. $\{f_n\}$ converges pointwise to $f$ for every $x \in E$. If $\sum f_n(x)$ converges, and if we define $f(x) = \sum_{n=1}^{\infty} f_n(x)$, then $f$ is the sum of the series $\sum f_n$. 
 \end{definition}
 
-\renewcommand{\thedefinition}{7.1}
+\renewcommand{\thedefinition}{of Norm}
 \begin{definition}
-    Suppose $\{f_n\}$ is a sequence of functions on a set $E$ and $\{f_n(x)\}$ is a sequence of numbers that converges for every $x \in E$. Then, define a function $f$ as the following: 
+    Let $f$ be a bounded function with $f: E \to \mathbb{R}$. Then, define the norm of $f$ to be 
     $$
-    f(x) = \lim_{n \to \infty} f_n(x)
+    ||f|| = \sup_{x\in E} |f(x)|.
     $$
-    Then, $\{f_n\}_{n=1}^{\infty}$ converges on $E$ if $f$ is the limit of $\{f_n\}$. $\{f_n\}_{n=1}^{\infty}$ converges pointwise to $f$ on $E$. $\sum f_n(x)$ converges for every $x \in E$; if we define $f(x) = \sum_{n=1}^{\infty} f_n(x)$, then $f$ is the sum of the series $\sum f_n$. 
 \end{definition}
 
-\renewcommand{\thedefinition}{7.1}
+\renewcommand{\thedefinition}{7.7}
 \begin{definition}
-    Suppose $\{f_n\}$ is a sequence of functions on a set $E$ and $\{f_n(x)\}$ is a sequence of numbers that converges for every $x \in E$. Then, define a function $f$ as the following:
-    $$
-    f(x) = \lim_{n \to \infty} f_n(x)
-    $$
-    $\{f_n\}_{n=1}^{\infty}$ converges on $E$ if $f$ is the limit of $\{f_n\}$. Then, $\{f_n\}_{n=1}^{\infty}$ converges pointwise to $f$ on $E$. If $\sum f_n(x)$ converges for every $x \in E$, and if we define $f(x) = \sum_{n=1}^{\infty} f_n(x)$, then $f$ is the sum of the series $\sum f_n$. 
+    $\{f_n\}$ converges pointwise on $E$ if for every $\epsilon > 0$ there exists an $N \in \mathbb{N}$ such that for all $n \geq N$ $||f - f_n|| < \epsilon$ (for all $x \in E$). 
 \end{definition}
 
 \end{document}

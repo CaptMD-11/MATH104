@@ -1346,6 +1346,9 @@ INPUT /usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/public/boondox/BOONDOX-r-cal.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/boondox/zxxrw7z.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/mathpazo/fplmbb.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/mathpazo/fplmbb.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/mathpazo/fplmbb.tfm
 INPUT Test.aux
 INPUT ./Test.out
 INPUT ./Test.out
@@ -1358,4 +1361,5 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/boondox/zxxrw8a.pfb

@@ -38,136 +38,287 @@
 
 \renewcommand{\thedefinition}{6.1}
 \begin{definition}
-    
-\end{definition}
-
-
-\renewcommand{\thedefinition}{6.1}
-\begin{definition}
-A sequence $\{p_n\}$ in a metric space $(X,d)$ is said to be a Cauchy sequence if for every $\epsilon > 0$ there exists an $N \in \mathbb{N}$ such that if $n,m \geq N$, then $d(p_n,p_m) < \epsilon$. 
-\end{definition}
-
-
-\renewcommand{\thedefinition}{6.1}
-\begin{definition}
-    A metric space in which every Cauchy sequence converges is called complete.
-\end{definition}
-
-
-\renewcommand{\thedefinition}{6.1}
-\begin{definition}
-    A sequence $\{p_n\}$ of real numbers is said to 
+    Let $S$ be a set. An order on $S$ is a relation, denoted by $<$, with the following properties: 
     \begin{enumerate}
-        \item be monotonically increasing if $p_n \leq p_{n+1}$ for all $n$.
-        \item be monotonically decreasing if $p_n \geq p_{n+1}$ for all $n$. 
+        \item if $x,y \in S$, then only one of the following is true: $x<y$, $x=y$, $y<x$. 
+        \item if $x,y,z \in S$ and $x<y$ and $y<z$ then $x<y<z$ and so $x<z$. 
     \end{enumerate}
 \end{definition}
 
-
 \renewcommand{\thedefinition}{6.1}
 \begin{definition}
-    Let $\{s_n\}$ be a sequence of real numbers. Let $E$ be the set of all subsequential limits of $\{s_n\}$. $E$ possibly includes $\infty, -\infty$. Then, let $s_\star = \inf E$ to be the lower limit of $\{s_n\}$ and $s^\star = \sup E$ be the upper limit of $\{s_n\}$. Then, it follows that $s^\star = \lim sup s_n$ and $s_\star = \lim \inf s_n$. 
+    An ordered set is a set in which an order is defined. 
 \end{definition}
 
-
 \renewcommand{\thedefinition}{6.1}
 \begin{definition}
-    Given a sequence $\{a_i\}$, let $\sum_{i=p}^{q} a_i = a_p + a_{p+1} + \dots + a_q$. Then $s_n = \sum_{i=1}^{n} a_i$ is the $n^{th}$ partial sum. 
+    Let $S$ be an ordered set and $E \subset S$. Then if there exists a $\beta \in S$ with $\beta \leq x$ for all $x \in E$, then $\beta$ is a lower bound of $E$ and $E$ is bounded below. If there is a $\beta in S$ with $\beta \geq x$ for all $x \in E$, then $\beta$ is an upper bound of $E$ and $E$ is bounded above. 
 \end{definition}
 
-
 \renewcommand{\thedefinition}{6.1}
 \begin{definition}
-    Let $(X,d_x)$ and $(Y,d_y)$ be metric spaces, $E \subset X$, $f: E \to Y$, and $p \in E'$. Then, $\lim_{x \to p} f(x) = q$ if for every $\epsilon > 0$ there exists a $\delta > 0$ such that for all $x \in E$, if $0 < d_x(x,p) < \delta$, then $d_y(f(x), q) < \epsilon$. 
+    Suppose $S$ is an ordered set, $E \subset S$, and $E$ is bounded above. Suppose there is an $\alpha \in S$ with the following properties: 
+    \begin{enumerate}
+        \item $\alpha \geq x$ for all $x \in E$.
+        \item if $\gamma < \alpha$ then $\gamma$ is not an upper bound of $E$.
+    \end{enumerate}
+    Then $\alpha = \sup E$ is the least upper bound of $E$. The definition of $\inf E$ being the greatest lower bound of $E$ is defined similarly. 
 \end{definition}
 
-
 \renewcommand{\thedefinition}{6.1}
 \begin{definition}
-    Use the same preliminaries as before except $p \in E$. Then $f$ is continuous at $p$ if for every $\epsilon > 0$ there exists a $\delta > 0$ such that for all $x \in E$, if $d_x(x,p) < \delta$ then $d_y(f(x), f(p)) < \epsilon$. 
+    An ordered set $S$ is said to have the least upper-bound property if the following statement is true: there is an $E \subset S$, $E$ is nonempty, $E$ is bounded above, then $\sup E \in S$.
 \end{definition}
 
-
 \renewcommand{\thedefinition}{6.1}
 \begin{definition}
-    A mapping $f: X \to \mathbb{R}^k$ is bounded if there exists an $M \mathbb{R}$ such that $|f(x)| \leq M$ for all $x \in E$. 
+    An ordered field $F$ is a field which is also an ordered set with: 
+    \begin{enumerate}
+        \item if $x,y,z \in F$ and $y<z$, then $x+y < x+z$.
+        \item if $x,y \in F$ with $x,y>0$, then $xy>0$. 
+    \end{enumerate}
 \end{definition}
 
-
 \renewcommand{\thedefinition}{6.1}
 \begin{definition}
-    Let $f: X \to Y$. $f$ is uniformly continuous on $X$ if for every $\epsilon > 0$ there exists a $\delta > 0$ such that for all $p,q \in X$ if $d_x(p,q) < \delta$ then $d_y(f(p), f(q)) < \epsilon$. 
+    Consider two sets $A$ and $B$. If there is a manner in which elements in $A$ are mapped to elements in $B$, then call this manner a function $f$. $f$ is also called a mapping of $A$ onto $B$. Then, $A$ is the domain of $f$ and each $f(x) \in B$ is a value of $f$. Then the set of all $f(x) \in B$ is the range of $f$. 
 \end{definition}
 
+\renewcommand{\thedefinition}{6.1}
+\begin{definition}
+    Let $f: A \to B$, and $E \subset A$. Then $f(E) = \{f(x) \mid x \in E\}$ is the image of $E$ under $f$. Instead, if $E \subset B$, then $f^{-1}(E) = \{x \in A \mid f(x) \in B\}$ is the inverse image of $E$ under $f$. $f$ is onto if every element of $B$ appears in the image of $f$. $f$ is 1-1 if $(f(x)=f(y)) \implies (x=y)$. If $f$ is both onto and 1-1 then $f$ is bijective. 
+\end{definition}
 
 \renewcommand{\thedefinition}{6.1}
 \begin{definition}
-    Let $f: [a,b] \to \mathbb{R}$. $f$ is differentiable at $x \in [a,b]$ if the following limit exists: 
+    If there exists a 1-1 mapping of $A$ onto $B$, then we say that $A$ and $B$ can be put into 1-1 correspondence. Then, we say that $A$ and $B$ have the same cardinal number, or that they are equivalent, denoted by $A \sim B$. If the relation $A \sim B$ satisfies: 
+    \begin{enumerate}
+        \item Reflexive: $A \sim A$.
+        \item Symmetric: $A \sim B \implies B \sim A$. 
+        \item Transitive: $(A \sim B \land B \sim C) \implies A \sim C$. 
+    \end{enumerate}
+    Then $A \sim B$ is called an equivalence relation.
+\end{definition}
+
+\renewcommand{\thedefinition}{6.1}
+\begin{definition}
+    Let $n \in \mathbb{N}$, $J = \mathbb{N}$, and $J_n$ be the set of the first $n$ positive integers. Then, define the following for a set $A$: 
+    \begin{enumerate}
+        \item $A$ is finite if $A \sim J_n$ for some $n$. 
+        \item $A$ is infinite if it is not finite. 
+        \item $A$ is countable if $A \sim J$.
+        \item $A$ is uncountable if it is neither countable nor finite.
+        \item $A$ is at most countable if it is either countable or finite. 
+    \end{enumerate}
+\end{definition}
+
+\renewcommand{\thedefinition}{6.1}
+\begin{definition}
+    A sequence is a function from the natural numbers to a set $X$.
+\end{definition}
+
+\renewcommand{\thedefinition}{6.1}
+\begin{definition}
+    A set $X$, whose elements we call elements, is a metric space if for each $p,q \in X$ we can find a real number that represents the distance between $p$ and $q$, denoted by $d$, with the following: 
+    \begin{enumerate}
+        \item $d(p,q) > 0$ if $p \neq q$. $d(p,p) = 0$.
+        \item $d(p,q) = d(q,p)$.
+        \item $d(p,q) \leq d(p,r) + d(r,q)$ for any $r \in X$.
+    \end{enumerate}
+    Any $d$ with these properties is called a distance function or metric. 
+\end{definition}
+
+\renewcommand{\thedefinition}{6.1}
+\begin{definition}
+    For any set $X$, in the discrete metric space, the metric is defined to be $d_D$ with $d_D = 0$ if $x=y$ and $d_D = 1$ if $x \neq y$ (for any $x,y \in X$). 
+\end{definition}
+
+\renewcommand{\thedefinition}{6.1}
+\begin{definition}
+    A sequence space is a space of all bounded sequences of real numbers. 
+\end{definition}
+
+\renewcommand{\thedefinition}{6.1}
+\begin{definition}
+    $l^p$ is the set of all sequences where each element is a sequence of the form $\{x_i\}$ with $\sum_{i=j}^{\infty} |x_j|^p < \infty$.
+\end{definition}
+
+\renewcommand{\thedefinition}{6.1}
+\begin{definition}
+    The $L^p$ metric is defined to be: $d(x,y) = \left(\sum_{j=1}^{n} |x_j - y_j|^p \right)^{1/p}$. For sequences, $d\left(\{x_i\}, \{y_i\}\right) = \left(\sum_{j=1}^{\infty} |x_j - y_j|^p \right)^{1/p}$
+\end{definition}
+
+\renewcommand{\thedefinition}{6.1}
+\begin{definition}
+    For $x \in \mathbb{R}^n$ the open ball of radius $r>0$ about $x$ is the set $\{y \in \mathbb{R}^n \mid d(x,y) < r\}$. The closed ball is $\{y \in \mathbb{R}^n \mid d(x,y) \leq r\}$. 
+\end{definition}
+
+\renewcommand{\thedefinition}{6.1}
+\begin{definition}
+    The segment $(a,b)$ is the set $\{x \in \mathbb{R} \mid a < x < b\}$ and the interval $[a,b]$ is the set $\{x \in \mathbb{R} \mid a \leq x \leq b\}$. 
+\end{definition}
+
+\renewcommand{\thedefinition}{6.1}
+\begin{definition}
+    Let $(X,d)$ be a metric space. Then, define the following: 
+    \begin{enumerate}
+        \item A neighborhood about a point $p \in X$ is the set $N_r(p) = \{q \in X \mid d(p,r) < r\}$ for a radius $r>0$.
+        \item A point $p$ is a limit point of a set $E \subseteq X$ if every neighborhood of $p$ contains a point $q \neq p$ with $q \in E$. 
+        \item $p$ is an isolated point of $E$ if $p \in E$ and $p$ is not a limit point of $E$. 
+        \item $E$ is closed if every limit point of $E$ is a point of $E$. 
+        \item A point $p$ is an interior point of $E$ if there is a neighborhood $N$ of $p$ (with radius $r>0$) with $N \subset E$. 
+        \item $E$ is open if every point of $E$ is an interior point of $E$. 
+        \item The complement of $E$ is the set $E^c \{x \in X \mid x \notin E\}$. 
+        \item $E$ is perfect if $E$ is closed and every point of $E$ is a limit point of $E$.  
+    \end{enumerate}
+\end{definition}
+
+\renewcommand{\thedefinition}{6.1}
+\begin{definition}
+    If $X$ is a metric space, and if $E \subset X$, let $E'$ be the set of all limit points of $E$. Then, $\bar{E} = E \cup E'$ is called the closure of $E$. 
+\end{definition}
+
+\renewcommand{\thedefinition}{6.1}
+\begin{definition}
+    AN open cover of $E$ is a collection of open set $\{G_\alpha\}$ such that the union of all $G_\alpha$ contains $E$. A subcover is a subcollection of $\{G_\alpha\}$ that still covers $E$. 
+\end{definition}
+
+\renewcommand{\thedefinition}{6.1}
+\begin{definition}
+    A subset $K$ of a metric space $(X,d)$ is said to be compact if every open cover of $K$ contains a finite subcover. 
+\end{definition}
+
+\renewcommand{\thedefinition}{6.1}
+\begin{definition}
+    If $a_i < b_i$ for all $i=1,\dots,k$, then the set of all $x$ with $a_i \leq x_i \leq b_i$ (in $\mathbb{R}^k$) is called a $k$-cell. 
+\end{definition}
+
+\renewcommand{\thedefinition}{6.1}
+\begin{definition}
+    A sequence $\{p_n\}$ in a metric space $(X,d)$ is said to converge if there is a point $p \in X$ with the property: for every $\epsilon > 0$ there exists an $N \in \mathbb{N}$ such that if $n \geq N$, then $d(p_n,p) < \epsilon$. We have the following phrasings: 
+    \begin{enumerate}
+        \item $\{p_n\}$ converges to $p$. 
+        \item $p_n \to p$. 
+        \item $\lim_{n \to \infty} p_n = p$. 
+    \end{enumerate}
+    If $\{p_n\}$ does not converge, it diverges. 
+\end{definition}
+
+\renewcommand{\thedefinition}{6.1}
+\begin{definition}
+    Given a sequence $\{p_n\}$, let $\{n_i\}$ be a sequence of solely natural numbers with $n_1 < n_2 < \dots$. Then $\{p_{n_i}\}$ is a subsequence of $\{p_n\}$. If $\{p_{n_i}\}$ converges, its limit is called a subsequential limit of $\{p_n\}$. 
+\end{definition}
+
+\renewcommand{\thedefinition}{6.1}
+\begin{definition}
+    A sequence $\{p_n\}$ in a metric space $(X,d)$ is said to be a Cauchy sequence if for every $\epsilon > 0$ there exists an $N \in \mathbb{N}$ such that if $n,m \geq N$, then $d(p_n,p_m) < \epsilon$. 
+\end{definition}
+
+\renewcommand{\thedefinition}{6.1}
+\begin{definition}
+    A metric space in which every Cauchy sequence converges is said to be complete. 
+\end{definition}
+
+\renewcommand{\thedefinition}{6.1}
+\begin{definition}
+    A sequence $\{p_n\}$ of real numbers is said to be 
+    \begin{enumerate}
+        \item monotonically increasing if $p_n \leq p_{n+1}$ for all $n$.
+        \item monotonically decreasing if $p_n \geq p_{n+1}$ for all $n$. 
+    \end{enumerate}
+\end{definition}
+
+\renewcommand{\thedefinition}{6.1}
+\begin{definition}
+    Let $\{s_n\}$ be a sequence of real numbers. Let $E$ be the set of all subsequential limits of $\{s_n\}$. Then, $E$ possibly includes $\infty,-\infty$. Define $s^\star = \sup E$ to be the upper limit of $\{s_n\}$ and $s_\star = \inf E$ to be the lower limit of $\{s_n\}$. Then, we have that $s^\star = \lim_{n \to \infty} \sup s_n$ and $s_\star = \lim_{n \to \infty} \inf s_n$. 
+\end{definition}
+
+\renewcommand{\thedefinition}{6.1}
+\begin{definition}
+    Given a sequence $\{a_i\}$, let $\sum_{i=p}^{q} a_i = a_p + a_{p+1} + \dots + a_q$. Then, let $s_n = \sum_{i=1}^{n} s_n$ be the $n^{th}$ partial sum. 
+\end{definition}
+
+\renewcommand{\thedefinition}{6.1}
+\begin{definition}
+    Let $(X,d_x)$ and $(Y,d_y)$ be metric spaces, $E \subset X$, $f: E \to Y$, and $p$ be a limit point of $E$. Then, $\lim_{x \to p} f(x) = q$ if there is a $q \in Y$ with: for every $\epsilon > 0$ there exists a $\delta > 0$ such that for all $x \in E$ if $0 < d_x(x,p) < \delta$, then $d_y(f(x), q) < \epsilon$. 
+\end{definition}
+
+\renewcommand{\thedefinition}{6.1}
+\begin{definition}
+    Retain the same preliminaries notations and conditions as the previous definition, except now instead, $p \in E$. Then, $f$ is continuous at $p$ if for every $\epsilon > 0$ there exists a $\delta > 0$ such that for all $x \in E$ if $d_x(x,p) < \delta$, then $d_y(f(x), f(q)) < \epsilon$. 
+\end{definition}
+
+\renewcommand{\thedefinition}{6.1}
+\begin{definition}
+    A mapping $f: E \to \mathbb{R}^k$ is said to be bounded if there is a real number $M$ such that $|f(x)| \leq M$ for all $x \in E$. 
+\end{definition}
+
+\renewcommand{\thedefinition}{6.1}
+\begin{definition}
+    Let $f: X \to Y$. $f$ is uniformly continuous on $X$ if for every $\epsilon > 0$ there exists a $\delta > 0$ such that for all $p,q \in X$, if $d_x(p,q) < \delta$, then $d_y(f(p), f(q)) < \epsilon$. 
+\end{definition}
+
+\renewcommand{\thedefinition}{6.1}
+\begin{definition}
+    A function $f: [a,b] \to \mathbb{R}$ is differentiable at $x \in [a,b]$ if the following limit exists: 
     $$
     f'(x) = \lim_{t \to x} \frac{f(t) - f(x)}{t-x}
     $$
-    where $f'$ is the first derivative of $f$ and $t \in [a,b]$ with $t \neq x$. 
+    where $f'$ is the first derivative of $f$. Note that $t \in [a,b]$ and $t \neq x$. 
 \end{definition}
 
 \renewcommand{\thedefinition}{6.1}
 \begin{definition}
-    Let $X$ be a set. $X$ is sequentially compact if every sequence in $X$ has a subsequence that converges to a point in $X$. 
+    A set $X$ is sequentially compact if every sequence in $X$ has a subsequence that converges to a point in $X$. 
 \end{definition}
 
 \renewcommand{\thedefinition}{6.1}
 \begin{definition}
-    Let $f: X \to \mathbb{R}$. $f$ has a local minimum at $p$ if there exists a $\delta > 0$ such that $f(q) \geq f(p)$ for every $q \in X$ with $d(p,q) < \delta$. $f$ has a local maximum at $p$ if there exists a $\delta > 0$ such that $f(q) \leq f(p)$ for every $q \in X$ with $d(p,q) < \delta$. 
+    Let $f: X \to \mathbb{R}$. $f$ has a local minimum at $p \in X$ if there exists a $\delta > 0$ such that $f(q) \geq f(p)$ for all $q \in X$ with $d(p,q) < \delta$. $f$ has a local maximum at $p \in X$ if there exists a $\delta > 0$ such that $f(q) \leq f(p)$ for all $q \in X$ with $d(p,q) < \delta$. 
 \end{definition}
 
 \renewcommand{\thedefinition}{6.1}
 \begin{definition}
-    Let $[a,b]$ be the given interval. A partition $P$ is a set of points $x_0, \dots, x_n$ with $a=x_0 \leq x_1 \leq \dots \leq x_n = b$. Then, $\Delta x_i = x_i - x_{i-1}$ and let $f$ be a bounded function on $[a,b]$. Then, let $M_i := \sup f(x)$ on $[x_{i-1}, x_i]$ and $m_i := \inf f(x)$ on $[x_{i-1}, x_i]$. Then, let $L(P,f) = \sum_{i=1}^{n} m_i \Delta x_i$ and $U(P,f) = \sum_{i=1}^{n} M_i \Delta x_i$. Then, let $\int_{\underline{a}}^{b} f dx = \sup L(P,f)$ be the lower Riemann integral of $f$ on $[a,b]$ and let $\int_{a}^{\overline{b}} f dx = \inf U(P,f)$ be the upper Riemann integral of $f$ on $[a,b]$. Then, if $\int_{\underline{a}}^{b} f dx = \int_{a}^{\overline{b}} f dx$, then $f$ is Riemann integrable on $[a,b]$ and denote the common value as $\int_{a}^{b} f dx$ (called the Riemann integral of $f$ on $[a,b]$). 
+    Let $[a,b]$ be the given interval. A partition $P$ of $[a,b]$ is a set of points $x_0,\dots,x_n$ such that $a=x_0 \leq x_1 \leq \dots \leq x_n=b$. Let $\Delta x_i = x_i - x_{i-1}$ (for $i=1,\dots,n$) and $f$ be a bounded function on $[a,b]$. Then, let $M_i = \sup f(x)$ on $[x_{i-1}, x_i]$ and $m_i = \inf f(x)$ on $[x_{i-1}, x_i]$. Then, let $U(P,f) = \sum_{i=1}^{n} M_i \Delta x_i$ and $L(P,f) = \sum_{i=1}^{n} m_i \Delta x_i$. Then, let $\int_{\underline{a}}^{b} f dx = \sup L(P,f)$ be the lower Riemann integral of $f$ on $[a,b]$ and $\int_{a}^{\overline{b}} f dx = \inf U(P,f)$ be the upper Riemann integral of $f$ on $[a,b]$. Then, if $\int_{\underline{a}}^{b} f dx = \int_{a}^{\overline{b}} f dx$, then $f$ is Riemann integrable on $[a,b]$ (write: $f \in \mathscr{R}$) and denote the common value as $\int_{a}^{b} f dx$ (called the Riemann integral of $f$ on $[a,b]$). 
 \end{definition}
 
 \renewcommand{\thedefinition}{6.1}
 \begin{definition}
-    Let $\alpha$ be a monotonically increasing function with $\Delta \alpha_i = \alpha(x_i) - \alpha(x_{i-1})$. Note that $\Delta \alpha_i \geq 0$ since $\alpha$ is monotonically increasing. Let $f$ be a real bounded function on $[a,b]$. Then, let $L(P,f,\alpha) = \sum_{i=1}^{n} m_i \Delta \alpha_i$ and $U(P,f,\alpha) = \sum_{i=1}^{n} M_i \Delta \alpha_i$. Then, let $\int_{\underline{a}}^{b} f d\alpha = \sup L(P,f,\alpha)$ and $\int_{a}^{\overline{b}} f d\alpha = \inf U(P,f,\alpha)$. If $\int_{\underline{a}}^{b} f d\alpha = \int_{a}^{\overline{b}} f d\alpha$ then $f$ is Riemann-Stieltjes integrable on $[a,b]$ and denote the common value as $\int_{a}^{b} f d\alpha$. 
+    Let $\alpha$ be a monotonically increasing function. Then, let $\Delta \alpha_i = \alpha(x_i) - \alpha(x_{i-1})$. Then, $\Delta \alpha_i \geq 0$ since $\alpha$ is monotonically increasing. Let $f$ be a bounded function on $[a,b]$ and $P$ be a partition of $[a,b]$. Let $U(P,f,\alpha) = \sum_{i=1}^{n} M_i \Delta \alpha_i$ and $L(P,f,\alpha) = \sum_{i=1}^{n} m_i \Delta \alpha_i$. Then, let $\int_{\underline{a}}^{f} f d\alpha = \sup L(P,f,\alpha)$ and $\int_{a}^{\overline{b}} f d\alpha = \inf U(P,f,\alpha)$. Then, if $\int_{\underline{a}}^{b} f d\alpha = \int_{a}^{\overline{b}} f d\alpha$, then $f$ is Riemann-Stieltjes integrable on $[a,b]$ (write $f \in \mathscr{R}(\alpha)$) and let the common value be $\int_{a}^{b} f d\alpha$ be the Riemann-Stieltjes integral of $f$ on $[a,b]$. 
 \end{definition}
 
 \renewcommand{\thedefinition}{6.1}
 \begin{definition}
-    The partition $P'$ is a refinement of the partition $P$ if $P' \supset P$. $P$ is the common refinement of partitions $P_1$ and $P_2$ if $P = P_1 \cup P_2$. 
+    A partition $P^\star$ is a refinement of a partition $P$ if $P^\star \supset P$. $P$ is the common refinement of partitions $P_1$ and $P_2$ if $P = P_1 \cup P_2$. 
 \end{definition}
 
 \renewcommand{\thedefinition}{6.1}
 \begin{definition}
-    Suppose $\{f_n\}$ is a sequence of functions defined on $E$ and $\{f_n(x)\}$ is a sequence of numbers that converges for every $x \in E$. Then, define the following function: 
+    Suppose $\{f_n\}$ is a sequence of functions on a set $E$. Then, suppose $\{f_n(x)\}$ is a sequence of numbers that converges for every $x \in E$. Then, define the following function (with $x \in E$): 
     $$
     f(x) = \lim_{n \to \infty} f_n(x)
-    $$ 
-    for all $x \in E$. Then, $\{f_n\}$ converges on $E$ if $f$ is the limit of $\{f_n\}$. $\{f_n\}$ converges pointwise to $f$ on $E$. If $\sum f_n(x)$ converges for every $x \in E$, and if we define
     $$
-    f(x) = \sum_{n=1}^{\infty} f_n(x)
-    $$
-    then $f$ is the sum of the series $\sum f_n$. 
+    $\{f_n\}$ converges on $E$ if $f$ is the limit of $\{f_n\}$. $\{f_n\}$ converges pointwise to $f$ on $E$. If $\sum f_n(x)$ converges for all $x \in E$ and if we define $f(x) = \sum_{n=1}^{\infty} f_n(x)$ (for $x \in E$), then $f$ is the sum of the series $\sum f_n$. 
 \end{definition}
 
 \renewcommand{\thedefinition}{6.1}
 \begin{definition}
-    Let $f$ be a bounded function with $f: E \to \mathbb{R}$. Then, let the following represent the norm of $f$. 
-    $$
-    ||f|| = \sup_{x \in E} |f(x)|
-    $$
+    For a bounded function $f: E \to \mathbb{R}$, let the norm of $f$ be $||f|| = \sup_{x \in E} |f(x)|$. 
 \end{definition}
 
 \renewcommand{\thedefinition}{6.1}
 \begin{definition}
-    $\{f_n\}$ converges uniformly if for every $\epsilon > 0$ there exists an $N \in \mathbb{N}$ such that if $n \geq N$, then, $||f_n - f|| < \epsilon$ for every $x \in E$. 
+    $\{f_n\}$ converges uniformly on $E$ to a function $f$ if for every $\epsilon > 0$ there exists an $N \in \mathbb{N}$ such that if $n \geq N$, then $||f_n - f|| < \epsilon$ for every $x \in E$. 
 \end{definition}
 
 \renewcommand{\thedefinition}{6.1}
 \begin{definition}
-    If $(X,d)$, let $\mathscr{C}(x) = \{f: X \to \mathbb{C}: f \text{ is bounded and continous}\}$. Then, for $f \in \mathscr{C}(x)$, let its supremum norm be defined by $||f|| = \sup_{x \in X} |f(x)|$. Also define $d_{\mathscr{C}(x)} (f,g) = ||f-g||$, where $\mathscr{C}(x)$ is a metric space. 
+    If $(X,d)$, then, let $\mathscr{C}(X) = \{f: X \to \mathbb{C}: f \text{ is bounded and continuous}\}$. For $f \in \mathscr{C}(X)$, define the supremum norm of $f$ to be $||f|| = \sup_{x \in X} |f(x)|$ and define $d_{\mathscr{C}(X)}(f,g) = ||f-g||$, where $\mathscr{C}(X)$ is a metric space. 
 \end{definition}
 
 \renewcommand{\thedefinition}{6.1}
 \begin{definition}
-    Let $\{f_n\}$ be a sequence of bounded functions on $E$. $\{f_n\}$ is pointwise bounded if $\{f_n(x)\}$ is bounded for every $x \in E$, that is, there is a real-valued function $\phi$, also defined on $E$, such that $|f_n(x)| < \phi$ for every $x \in E$. $\{f_n\}$ is uniformly bounded on $E$ if there exists an $M \in \mathbb{R}$ such that $|f_n(x)| \leq M$ for every $x \in E$ and natural number $n$.  
+    Let $\{f_n\}$ be a sequence of bounded functions on $E$. Then, $\{f_n\}$ is pointwise bounded if $\{f_n(x)\}$ is bounded (for each $x \in E$), that is, there is a real-valued function $\phi$ on $E$ with $|f_n(x)| \leq \phi(x)$ for each $x \in E$. $\{f_n\}$ is uniformly bounded on $E$ if there exists an $M \in \mathbb{R}$ such that $|f_n(x)| \leq M$ for all $x \in E$, $n \in \mathbb{N}$. 
 \end{definition}
 
 \end{document}
